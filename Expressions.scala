@@ -16,6 +16,9 @@ object Expressions {
  		val d = readInt()
  		val e = readLine()
 		val f = null
-		println(a + "  " + b + "  " + c + "  " + d + "  " + e + "  " + f)
+		val g = {val a1 = 2 + 3; val a2 = 3 + 4; val a3 = 4 + 5; a1 + a2 + a3} // g -in veragrvum e verji gorcoxutyunneri gumar@
+		val h = {val a1 = 2 + 3; val a2 = 3 + 4; val a3 = 4 + 5} // h-in veragrvum e ()
+		lazy val i = 1 // lazy-i mijocov i -n chi inicilizacvi aynqan jamanak qani der chi ogtagorcvel	
+		println(a + "  " + b + "  " + c + "  " + d + "  " + e + "  " + f + "  " + g + "  " + h + "  " + i)
 	}
 }

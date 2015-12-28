@@ -7,7 +7,8 @@
  * while, do while nuyn principov en
  * break continue chka dra hamar petq e dzerqov kazmakerpel
  * try, flag... scala.util.control.break
- * 
+ * foreach -@ cikl e vor@ ancnum e zangvaci bolor elementneri vrayov ev yuraqanchyur element
+ * veragrum e _ in ete anhrajesht e mer uzacin veragrel grvum e skzbum NN => 
  **/
 object Operator_loop {
 	def main(arg: Array[String]) = {
@@ -45,5 +46,18 @@ object Operator_loop {
 		println(vec)
 		val v = for (i <- 1 until 10) yield i % 2 // 1 0 1 0 ...
 		println(v)
+		println("-----------------")
+		vec.foreach{
+			print(_)
+		}
+		println()
+		vec.foreach(
+			print(_)
+		)
+		println()
+		vec.foreach( i => // ete foreachum bart gorcoxutyunner piti katarvi aveli lav e veragrel @ntaciq@ inchvor elementi
+			print(i + " ")
+		)
+		println()
 	}
 }
