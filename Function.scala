@@ -1,4 +1,5 @@
 /**
+ * Funkcian scalayum obyekt e => kareli e manipuliacianer anel aynpes inchpes obyekti het pahel, veradarcnel poxel kes kes ashxatel...
  * Funkcian sksvum e def barov aynuhetev anun pakagcerum stacvoxargumentner veradarcnox tip em marmin
  * Kan defoult argumentner
  * Kan tarber qanakutyan argumentner 
