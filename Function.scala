@@ -7,6 +7,7 @@
  * Goyutyun uni funkciayi masnaki kanch aysinqn argumentneri mi mas@ poxancvi aynuhetyev myus@ ev erb myusnel poxancvi kirakanacvi funkcian
  * kareli e funkciayum funkcia grel
  * Hnaravor e rekursiv funkciayin cucel vor na darna iterativ
+ * Ka function overloading
  **/
 object Function {
 	def A() = println("A") // veradarci tip@ voroshvum e aftomat kerpov
