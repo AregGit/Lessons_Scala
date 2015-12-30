@@ -12,7 +12,7 @@
  * Bolor classer@ unen constructor voroncic himnakan@ grvum e classi anuni koxq@ pakagcerum ev 
  * erb nra kanchne texi unenum scalan  talis chveragrel ayl dashteri  qani vor ayd andami ogtagorcman jamanak,
  * na ksarqi classi andam vorpes funkciayi argument@
- * Kareli e grel nerdrvac classer new A.B()
+ * Kareli e grel nerdrvac classer new A.B() // nrdrvacclass@ karox e jarangel henc ir classicclass A{ class B extends A {} }
  * applay() funkcian sahmanelu depqum kanch@ klini ayn jamnak erb dimen ob() ayspes hamarjeq e ob.applay()
  * scalayum kareli e overload anel operatorner@ grete bolor simvolnelov
  * case bar@ erb grvum e classi dimac apa ayd classi hamar aftomat tramadrvum e equals(), toString(), hashCode() ev serialaiz.
@@ -20,12 +20,12 @@
  * class [T]Name template class
  **/
 
-class Test {
+class Test_1 {
 	//var r: Int //error dasht@ piti inicilizacvi
 	val Mm: Int = 11 // inicilizacvum e erb stexcvum em obyekt
 	def f() = 1111
 	private[this] var Mn: Int = 22
-	//def tt(t: Test) = t.Mn = 33 // error
+	//def tt(t: Test) = t.Mn = 33 // error ete chgrver private[this] ayl private kliner ok
 
 }
 
@@ -40,7 +40,7 @@ class Test_2(var aia: Int) { // ete var chgrvi apa vorpes member chi dzevavorvi
 	def apply() = "APPLAY"
 }
 
-case class test_3 {
+case class test_3(ss: Int = 999) { // aranc argumenti warning 
 	val i = 9
 }
 class test_4 {
@@ -49,17 +49,26 @@ class test_4 {
 
 object Class {
 	def main(arg: Array[String]) = {
-		val l = new Test()
-		val ll = new Test()
+		val l = new Test_1()
+		val ll = new Test_1()
 		println(l.Mm)
 		println(l.f) // ok
 		println(l.f()) // ok
+
 		val s = new Test_2(33, 44)
 		println(s.aia)
 		println(s())
+
+		val c = test_3()
+		println(c.ss) //ete class@ case chliner kstacver error vortev ankax amenic constructori parametreri hamar get e sahmanvum scalai koxmic
+			      // itarberutyun sovorakan classi
+		//val t = new test_4()
+		//println(t.ss) // error 
+
 		val c1 = test_3()
 		val c2 = test_3()
 		if(c1 == c2) println("Yes") else println("No")
+
 		val t1 = new test_4()
 		val t2 = new test_4()
 		if(t1 == t2) println("Yes") else println("No")
