@@ -11,7 +11,13 @@
  * kareli e jarangel java classeric
  * kareli e verasahmanel nayev popoxakanner@ ev constantner@ nranc hamarel e generacvum get funkcia ev verasahmanvum
  * sakayn def anunov sahmanum@ miayn def piti verasahmani nuyn@ val i hamar vari hamar ayn jamanak erb na abstract e sahmanvac
+ *
  * Abstract classi obyekt chi kareli sarqel nranic petq e jarangel
+ * Abstract classi methodner@ verasahmaneluc override petq chi grel
+ * abstract classi funkcianeri skzbum kariq chka abstract bar@ grel da aftomat kerpov arvum e def f
+ *
+ * kareli e ananun jarang class grel
+ * operator == hamematum e obyektner@ vochte hxumner@ 
  **/
 
 class base {
@@ -30,6 +36,7 @@ class B(a: Int) extends A(a) { // kanchum e base classi constructor@ poxancelov 
 
 abstract class AAA {
 	var ar: Int
+	def abstr
 }
 
 class AA() {
@@ -39,7 +46,7 @@ class AA() {
 class BB() extends AA {
 	override val l = 2
 	//override var r = 2 // error var karox e verasahmanvel ete haytararvac e abstractum
-	var ar: Int = 11
+	var ar: Int = 11 //verasahmanvac ar
 }
 
 object Inheritance {
@@ -51,7 +58,14 @@ object Inheritance {
 
 		val d = new dir()
 		println(d.dirfunc)
-		
-		
+
+		val unname = new base() { //ananun jarang class
+			val name = "unnamed"
+		}	
+		println(unname.name)	
+		val l = new {
+			val name = "who im"
+		}		
+		println(l.name)
 	}
 }
